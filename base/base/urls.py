@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import path, include # include is used to include other urls.py files
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # it's literally just a path to the admin site and if we comment it out, we can't access the admin site
+    path('admin/', admin.site.urls), # admin site url
+
+    # this is the url for the shop app (all the urls)
+    path('shop/', include('shop.urls')), # shop app url
 ]

@@ -1,0 +1,9 @@
+to start server : python3 base/manage.py runserver
+
+to create a new tab : python3 manage.py startapp shop (shop - name of the app/tab)
+
+to CREATE a project from 0: django-admin startproject base (base - name of the project)
+
+Why call the project base? Because it will be a main folder and you will know right 
+away where the main folder is.
+
