@@ -1,0 +1,49 @@
+# Django Quick Reference
+
+## Setup
+- Ensure Python 3.10+ is installed.
+- Install project dependencies with `python3 -m pip install -r requirements.txt` if present.
+- Otherwise install Django directly: `python3 -m pip install django`.
+
+## Start a Project
+- To create a new project: `django-admin startproject <project_name>`.
+- Example: `django-admin startproject base` creates the `base` folder with project files.
+
+## Start an App
+- From the project root (where `manage.py` lives): `python3 manage.py startapp <app_name>`.
+- Add the new app to `INSTALLED_APPS` in `<project_name>/settings.py`.
+
+## Apply Database Migrations
+- Create migration files: `python3 manage.py makemigrations`.
+- Apply migrations: `python3 manage.py migrate`.
+
+## Run the Development Server
+- Start server: `python3 manage.py runserver` (defaults to `http://127.0.0.1:8000/`).
+- Specify a port: `python3 manage.py runserver 0.0.0.0:8080`.
+
+## Stop the Development Server
+- Press `Ctrl+C` in the terminal running the server.
+
+## Create a Superuser
+- `python3 manage.py createsuperuser`
+- Follow prompts for username, email, and password.
+
+## Collect Static Files (Production)
+- `python3 manage.py collectstatic`
+
+## Open Django Shell
+- `python3 manage.py shell`
+
+## Manage Environment Variables
+- Use `.env` with `python-dotenv` or set variables in the shell before running commands.
+
+## Helpful Flags
+- `--settings=<module>`: point to custom settings (e.g., `base.settings.local`).
+- `--verbosity {0,1,2,3}`: adjust command output detail.
+- `--traceback`: show full error trace when a command fails.
+
+## Useful Links
+- Official docs: https://docs.djangoproject.com/
+- Django admin customization: https://docs.djangoproject.com/en/stable/ref/contrib/admin/
+- Deployment checklist: https://docs.djangoproject.com/en/stable/howto/deployment/checklist/
+
