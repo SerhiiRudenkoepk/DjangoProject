@@ -7,3 +7,6 @@ to CREATE a project from 0: django-admin startproject base (base - name of the p
 Why call the project base? Because it will be a main folder and you will know right 
 away where the main folder is.
 
+python3 manage.py migrate # used to migrate all the data to db.
+
+# python manage.py createsuperuser  -> to create a superuser/admin
