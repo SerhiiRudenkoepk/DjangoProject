@@ -12,3 +12,12 @@ python3 manage.py migrate # used to migrate all the data to db.
 # python manage.py createsuperuser  -> to create a superuser/admin
 
 delete category we can through the admin 
+
+to do a migration so our new "app" (tab) would appear in db too, we need to do a migration.
+
+# python3 manage.py makemigration
+
+
+ ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+
+ primary_key - is created automatically, even if we don't have it.

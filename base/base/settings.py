@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shop', # parh to shop app. We're using "shop" because it's easier than using "shop.apps.ShopConfig"
 ]
 
 MIDDLEWARE = [

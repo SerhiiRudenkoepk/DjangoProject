@@ -16,6 +16,7 @@ class Category(models.Model):
 class Course(models.Model):
     title = models.CharField(max_length = 255) 
     price = models.FloatField() # float number 
-    students_qty = models.IntengerField() # amount of students
-    review_qty = models.IntengerField() # int for a score
+    students_qty = models.IntegerField() # amount of students
+    review_qty = models.IntegerField() # int for a score
     category = models.ForeignKey(Category, on_delete=models.CASCADE) # when we will delete this category, everything will be deleted from this category
+    created_at = models.DateTimeField(default=timezone.now)
